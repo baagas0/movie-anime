@@ -20,7 +20,7 @@ export async function generateMetadata({ params }: { params: Promise<{ id: strin
   const description =
     anime.description?.slice(0, 155) ||
     `Tonton ${anime.title} tanpa iklan dan jelajahi semua episode hanya di OtaMovie.`
-  const poster = anime.image_url || "/og-image.png"
+  const poster = anime.image_url || "/banner-image.png"
   const genreKeywords = Array.isArray(anime.genre) ? anime.genre.join(", ") : anime.genre
 
   return {

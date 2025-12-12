@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     url: "/",
     images: [
       {
-        url: "/og-image.png",
+        url: "/banner-image.png",
         width: 1200,
         height: 630,
         alt: "Beranda OtaMovie",
@@ -39,7 +39,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "OtaMovie - Anime Terpopuler & Seri Pilihan",
     description: "Lihat anime terpopuler, trailer, dan episode pilihan tanpa iklan. Temukan tontonan berikutnya di OtaMovie.",
-    images: ["/og-image.png"],
+    images: ["/banner-image.png"],
   },
   alternates: {
     canonical: "/",

@@ -34,10 +34,10 @@ export const metadata: Metadata = {
     description: "Nonton anime tanpa iklan, jelajahi film dan seri anime terbaik dengan sub indo di OtaMovie.",
     images: [
       {
-        url: "/og-image.png",
+        url: "/banner-image.png",
         width: 1200,
         height: 630,
-        alt: "OtaMovie",
+        alt: "OtaMovie Banner",
       },
     ],
   },
@@ -47,7 +47,7 @@ export const metadata: Metadata = {
     creator: "@OtaMovie",
     title: `${siteName} - Streaming Anime Tanpa Iklan`,
     description: "Nonton anime tanpa iklan, jelajahi film dan seri anime terbaik dengan sub indo di OtaMovie.",
-    images: ["/og-image.png"],
+    images: ["/banner-image.png"],
   },
   alternates: {
     canonical: siteUrl,
