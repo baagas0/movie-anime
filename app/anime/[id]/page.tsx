@@ -12,17 +12,27 @@ export async function generateMetadata({ params }: { params: Promise<{ id: strin
 
   if (!anime) {
     return {
-      title: "Anime not found",
+      title: "Anime tidak ditemukan",
       robots: { index: false, follow: false },
     }
   }
 
-  const description = anime.description?.slice(0, 155) || `Watch ${anime.title} and explore episodes.`
+  const description =
+    anime.description?.slice(0, 155) ||
+    `Tonton ${anime.title} tanpa iklan dan jelajahi semua episode hanya di OtaMovie.`
   const poster = anime.image_url || "/og-image.png"
+  const genreKeywords = Array.isArray(anime.genre) ? anime.genre.join(", ") : anime.genre
 
   return {
     title: anime.title,
     description,
+    keywords: [
+      anime.title,
+      "nonton anime",
+      "anime tanpa iklan",
+      "streaming anime",
+      genreKeywords,
+    ],
     openGraph: {
       title: anime.title,
       description,

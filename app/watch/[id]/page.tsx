@@ -30,12 +30,20 @@ export async function generateMetadata({
   const title = `${anime.title} - ${currentEpisode?.episode || "Episode"}`
   const description =
     currentEpisode?.title?.slice(0, 155) ||
-    `Watch ${currentEpisode?.episode || "this episode"} of ${anime.title}.`
+    `Tonton ${currentEpisode?.episode || "episode ini"} dari ${anime.title} tanpa iklan di OtaMovie.`
   const poster = anime.image_url || "/og-image.png"
+  const genreKeywords = Array.isArray(anime.genre) ? anime.genre.join(", ") : anime.genre
 
   return {
     title,
     description,
+    keywords: [
+      anime.title,
+      currentEpisode?.episode || "episode",
+      "nonton anime",
+      "anime tanpa iklan",
+      genreKeywords,
+    ],
     openGraph: {
       title,
       description,

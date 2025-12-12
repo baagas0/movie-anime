@@ -7,23 +7,31 @@ import "./globals.css"
 const _inter = Inter({ subsets: ["latin"] })
 const _geistMono = Geist_Mono({ subsets: ["latin"] })
 
-const siteUrl = "https://OtaMovie.example.com"
+const siteUrl = "https://otamovie.my.id"
 const siteName = "OtaMovie"
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: `${siteName} - Discover Amazing Anime Movies`,
+    default: `${siteName} - Streaming Anime Tanpa Iklan`,
     template: `%s | ${siteName}`,
   },
-  description: "Your gateway to the best anime movies. Explore, discover, and enjoy.",
-  keywords: ["anime", "movies", "series", "streaming", "watch anime online"],
+  description: "Nonton anime tanpa iklan, jelajahi film dan seri anime terbaik dengan sub indo di OtaMovie.",
+  keywords: [
+    "anime",
+    "film anime",
+    "seri anime",
+    "streaming anime",
+    "nonton anime sub indo",
+    "anime tanpa iklan",
+    "anime terbaru",
+  ],
   openGraph: {
     siteName,
     type: "website",
     url: siteUrl,
-    title: `${siteName} - Discover Amazing Anime Movies`,
-    description: "Your gateway to the best anime movies. Explore, discover, and enjoy.",
+    title: `${siteName} - Streaming Anime Tanpa Iklan`,
+    description: "Nonton anime tanpa iklan, jelajahi film dan seri anime terbaik dengan sub indo di OtaMovie.",
     images: [
       {
         url: "/og-image.png",
@@ -37,8 +45,8 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     site: "@OtaMovie",
     creator: "@OtaMovie",
-    title: `${siteName} - Discover Amazing Anime Movies`,
-    description: "Your gateway to the best anime movies. Explore, discover, and enjoy.",
+    title: `${siteName} - Streaming Anime Tanpa Iklan`,
+    description: "Nonton anime tanpa iklan, jelajahi film dan seri anime terbaik dengan sub indo di OtaMovie.",
     images: ["/og-image.png"],
   },
   alternates: {
@@ -53,7 +61,7 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en">
+    <html lang="id">
       <body className={`font-sans antialiased`}>
         {children}
         <Analytics />
