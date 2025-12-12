@@ -1,9 +1,18 @@
+import type { Metadata } from "next"
 import { Header } from "@/components/header"
 import { HeroSection } from "@/components/hero-section"
 import { CategoryTabs } from "@/components/category-tabs"
 import { MovieGrid } from "@/components/movie-grid"
 import { FeaturedSection } from "@/components/featured-section"
 import { Footer } from "@/components/footer"
+
+export const metadata: Metadata = {
+  title: "Home",
+  description: "Discover trending anime movies, watch episodes, and explore genres.",
+  alternates: {
+    canonical: "/",
+  },
+}
 
 export default function HomePage() {
   return (

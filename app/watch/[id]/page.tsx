@@ -1,8 +1,58 @@
+import type { Metadata } from "next"
 import { Header } from "@/components/header"
 import { VideoPlayer } from "@/components/video-player"
 import animeData from "@/data/anime.json"
 import type { Anime } from "@/lib/types"
 import { notFound } from "next/navigation"
+
+export async function generateMetadata({
+  params,
+  searchParams,
+}: {
+  params: Promise<{ id: string }>
+  searchParams: Promise<{ ep?: string }>
+}): Promise<Metadata> {
+  const { id } = await params
+  const { ep } = await searchParams
+  const anime = (animeData as Anime[]).find((a) => a.id === id)
+
+  if (!anime) {
+    return {
+      title: "Episode not found",
+      robots: { index: false, follow: false },
+    }
+  }
+
+  const episodeNumber = Number.parseInt(ep || "1", 10)
+  const episodeIndex = anime.episodes.length - episodeNumber
+  const currentEpisode = anime.episodes[episodeIndex] || anime.episodes[anime.episodes.length - 1]
+
+  const title = `${anime.title} - ${currentEpisode?.episode || "Episode"}`
+  const description =
+    currentEpisode?.title?.slice(0, 155) ||
+    `Watch ${currentEpisode?.episode || "this episode"} of ${anime.title}.`
+  const poster = anime.image_url || "/og-image.png"
+
+  return {
+    title,
+    description,
+    openGraph: {
+      title,
+      description,
+      images: [{ url: poster }],
+      type: "video.other",
+    },
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description,
+      images: [poster],
+    },
+    alternates: {
+      canonical: `/watch/${id}?ep=${episodeNumber}`,
+    },
+  }
+}
 
 export default async function WatchPage({
   params,
