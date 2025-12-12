@@ -5,6 +5,7 @@ import { CategoryTabs } from "@/components/category-tabs"
 import { MovieGrid } from "@/components/movie-grid"
 import { FeaturedSection } from "@/components/featured-section"
 import { Footer } from "@/components/footer"
+import { UpdateSchedulePopup } from "@/components/update-schedule-popup"
 
 export const metadata: Metadata = {
   title: {
@@ -59,6 +60,7 @@ export default function HomePage() {
         </section>
       </main>
       <Footer />
+      <UpdateSchedulePopup />
     </div>
   )
 }
