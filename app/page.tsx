@@ -8,7 +8,7 @@ import { Footer } from "@/components/footer"
 
 export const metadata: Metadata = {
   title: {
-    default: "Home",
+    default: "OtaMovie - Streaming Anime Tanpa Iklan",
     template: "%s | OtaMovie",
   },
   description: "Jelajahi anime populer tanpa iklan, tonton episode, temukan genre favorit, dan cari rekomendasi tontonan terbaik di OtaMovie.",
