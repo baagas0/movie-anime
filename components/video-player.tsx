@@ -26,7 +26,7 @@ export function VideoPlayer({ anime, currentEpisode, episodeNumber }: VideoPlaye
         {/* Video Container */}
         <div className="relative w-full aspect-video bg-black">
           <iframe
-            src={currentEpisode.iframe_url}
+            src={`/api/player?id=${anime.id}&ep=${episodeNumber}`}
             className="absolute inset-0 w-full h-full"
             allowFullScreen
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -89,8 +89,8 @@ export function VideoPlayer({ anime, currentEpisode, episodeNumber }: VideoPlaye
         {/* Anime Info */}
         <div className="p-4 md:p-6 bg-background">
           <div className="flex gap-4 md:gap-6">
-            <div className="hidden sm:block flex-shrink-0">
-              <div className="w-24 md:w-32 aspect-[2/3] rounded-lg overflow-hidden border border-border">
+            <div className="hidden sm:block shrink-0">
+              <div className="w-24 md:w-32 aspect-2/3 rounded-lg overflow-hidden border border-border">
                 <img
                   src={anime.image_url || "/placeholder.svg"}
                   alt={anime.title}
@@ -193,7 +193,7 @@ export function VideoPlayer({ anime, currentEpisode, episodeNumber }: VideoPlaye
                     }`}
                   >
                     <div
-                      className={`w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0 ${
+                      className={`w-10 h-10 rounded-lg flex items-center justify-center shrink-0 ${
                         isActive ? "bg-primary text-primary-foreground" : "bg-secondary text-secondary-foreground"
                       }`}
                     >
