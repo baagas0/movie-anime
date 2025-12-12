@@ -11,7 +11,7 @@ export function Header() {
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border">
-      {/* <div className="flex items-center justify-between px-4 py-4 md:px-8 lg:px-16">
+      <div className="flex items-center justify-between px-4 py-4 md:px-8 lg:px-16">
         <div className="flex items-center gap-8">
           <a href="/" className="flex items-center gap-2">
             <div className="w-10 h-10 rounded-lg bg-primary flex items-center justify-center">
@@ -27,7 +27,7 @@ export function Header() {
           </nav>
         </div>
 
-        <div className="flex items-center gap-3">
+        {/* <div className="flex items-center gap-3">
           {isSearchOpen ? (
             <div className="flex items-center gap-2">
               <Input placeholder="Search anime..." className="w-48 md:w-64 bg-secondary border-border" autoFocus />
@@ -52,8 +52,8 @@ export function Header() {
           <Button variant="ghost" size="icon" className="md:hidden" onClick={() => setIsMenuOpen(!isMenuOpen)}>
             {isMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
           </Button>
-        </div>
-      </div> */}
+        </div> */}
+      </div>
 
       {isMenuOpen && (
         <nav className="md:hidden px-4 pb-4 flex flex-col gap-3 bg-background border-b border-border">
