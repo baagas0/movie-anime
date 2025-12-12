@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
+import Image from "next/image"
 
 export function Footer() {
   return (
@@ -8,9 +9,7 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
           <div>
             <div className="flex items-center gap-2 mb-4">
-              <div className="w-10 h-10 rounded-lg bg-primary flex items-center justify-center">
-                <span className="text-primary-foreground font-bold text-lg">A</span>
-              </div>
+              <Image src="/logo.png" alt="OtaMovie" width={100} height={100} className="w-10 h-10 rounded-full" />
               <span className="text-xl font-bold text-foreground">OtaMovie</span>
             </div>
             <p className="text-muted-foreground text-sm leading-relaxed mb-4">

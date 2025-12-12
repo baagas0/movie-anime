@@ -4,6 +4,7 @@ import { useState } from "react"
 import { Search, Menu, X, User, Bell } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
+import Image from "next/image"
 
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -14,9 +15,10 @@ export function Header() {
       <div className="flex items-center justify-between px-4 py-4 md:px-8 lg:px-16">
         <div className="flex items-center gap-8">
           <a href="/" className="flex items-center gap-2">
-            <div className="w-10 h-10 rounded-lg bg-primary flex items-center justify-center">
+            {/* <div className="w-10 h-10 rounded-lg bg-primary flex items-center justify-center">
               <span className="text-primary-foreground font-bold text-lg">A</span>
-            </div>
+            </div> */}
+            <Image src="/logo.png" alt="OtaMovie" width={100} height={100} className="w-10 h-10 rounded-full" />
             <span className="text-xl font-bold text-foreground hidden sm:block">OtaMovie</span>
           </a>
 
