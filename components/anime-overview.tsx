@@ -21,16 +21,16 @@ export function AnimeOverview({ anime }: AnimeOverviewProps) {
             backgroundImage: `url('${anime.image_url}')`,
           }}
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-background via-background/80 to-background/40" />
-        <div className="absolute inset-0 bg-gradient-to-r from-background via-background/60 to-transparent" />
+        <div className="absolute inset-0 bg-linear-to-t from-background via-background/80 to-background/40" />
+        <div className="absolute inset-0 bg-linear-to-r from-background via-background/60 to-transparent" />
       </section>
 
       {/* Content Section */}
       <section className="relative z-10 px-4 md:px-8 lg:px-16 -mt-48">
         <div className="flex flex-col lg:flex-row gap-8">
           {/* Poster */}
-          <div className="flex-shrink-0">
-            <div className="w-48 md:w-64 aspect-[2/3] rounded-xl overflow-hidden shadow-2xl border border-border">
+          <div className="shrink-0">
+            <div className="w-48 md:w-64 aspect-2/3 rounded-xl overflow-hidden shadow-2xl border border-border">
               <img
                 src={anime.image_url || "/placeholder.svg"}
                 alt={anime.title}
@@ -90,10 +90,6 @@ export function AnimeOverview({ anime }: AnimeOverviewProps) {
                   Watch Episode 1
                 </Button>
               </Link>
-              <Button size="lg" variant="outline" className="border-border hover:bg-secondary gap-2 bg-transparent">
-                <Plus className="w-5 h-5" />
-                Add to Watchlist
-              </Button>
             </div>
 
             {/* Director */}
@@ -130,15 +126,27 @@ export function AnimeOverview({ anime }: AnimeOverviewProps) {
             .map((ep, index) => (
               <Link key={ep.episode} href={`/watch/${anime.id}?ep=${index + 1}`}>
                 <div className="group relative bg-card rounded-lg overflow-hidden border border-border hover:border-primary transition-colors cursor-pointer">
-                  <div className="aspect-video bg-muted flex items-center justify-center relative overflow-hidden">
+                  <div className="aspect-video relative overflow-hidden">
                     <img
                       src={anime.image_url || "/placeholder.svg"}
-                      alt={ep.episode}
-                      className="w-full h-full object-cover opacity-60 group-hover:opacity-80 transition-opacity"
+                      alt={ep.title || ep.episode}
+                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                     />
-                    <div className="absolute inset-0 flex items-center justify-center bg-background/40 group-hover:bg-background/20 transition-colors">
-                      <div className="w-12 h-12 rounded-full bg-primary/90 flex items-center justify-center group-hover:scale-110 transition-transform">
-                        <Play className="w-5 h-5 fill-primary-foreground text-primary-foreground ml-1" />
+                    <div className="absolute inset-0 bg-linear-to-t from-background/85 via-background/30 to-transparent" />
+                    <div className="absolute inset-0 bg-linear-to-r from-background/50 via-transparent to-transparent" />
+
+                    <div className="absolute top-3 left-3 bg-primary text-primary-foreground text-xs font-semibold px-2 py-1 rounded-md shadow">
+                      {ep.episode}
+                    </div>
+                    <div className="absolute bottom-3 left-3 right-3 flex items-center justify-between text-xs text-foreground">
+                      <div className="flex items-center gap-2">
+                        <div className="w-10 h-10 rounded-full bg-background/70 backdrop-blur-sm flex items-center justify-center border border-border">
+                          <Play className="w-4 h-4 fill-primary text-primary ml-1" />
+                        </div>
+                        <div className="flex flex-col">
+                          <span className="font-semibold line-clamp-1">{ep.title || anime.title}</span>
+                          <span className="text-muted-foreground">{ep.release_date || "Upcoming"}</span>
+                        </div>
                       </div>
                     </div>
                   </div>

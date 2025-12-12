@@ -11,7 +11,7 @@ export function Header() {
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border">
-      <div className="flex items-center justify-between px-4 py-4 md:px-8 lg:px-16">
+      {/* <div className="flex items-center justify-between px-4 py-4 md:px-8 lg:px-16">
         <div className="flex items-center gap-8">
           <a href="/" className="flex items-center gap-2">
             <div className="w-10 h-10 rounded-lg bg-primary flex items-center justify-center">
@@ -23,18 +23,6 @@ export function Header() {
           <nav className="hidden md:flex items-center gap-6">
             <a href="#" className="text-foreground hover:text-primary transition-colors font-medium">
               Home
-            </a>
-            <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
-              Movies
-            </a>
-            <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
-              Series
-            </a>
-            <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
-              Popular
-            </a>
-            <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
-              New Releases
             </a>
           </nav>
         </div>
@@ -65,14 +53,14 @@ export function Header() {
             {isMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
           </Button>
         </div>
-      </div>
+      </div> */}
 
       {isMenuOpen && (
         <nav className="md:hidden px-4 pb-4 flex flex-col gap-3 bg-background border-b border-border">
           <a href="#" className="text-foreground hover:text-primary transition-colors py-2">
             Home
           </a>
-          <a href="#" className="text-muted-foreground hover:text-primary transition-colors py-2">
+          {/* <a href="#" className="text-muted-foreground hover:text-primary transition-colors py-2">
             Movies
           </a>
           <a href="#" className="text-muted-foreground hover:text-primary transition-colors py-2">
@@ -83,7 +71,7 @@ export function Header() {
           </a>
           <a href="#" className="text-muted-foreground hover:text-primary transition-colors py-2">
             New Releases
-          </a>
+          </a> */}
         </nav>
       )}
     </header>

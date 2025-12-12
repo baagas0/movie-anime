@@ -60,11 +60,7 @@ export function HeroSection() {
               <Play className="w-5 h-5 fill-current" />
               Watch Now
             </Button>
-          </Link>
-          <Button size="lg" variant="outline" className="border-border hover:bg-secondary gap-2 bg-transparent">
-            <Plus className="w-5 h-5" />
-            Add to List
-          </Button>
+          </Link>Í
           <Link href={`/anime/${featured.id}`}>
             <Button size="lg" variant="ghost" className="gap-2">
               <Info className="w-5 h-5" />
