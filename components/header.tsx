@@ -17,7 +17,7 @@ export function Header() {
             <div className="w-10 h-10 rounded-lg bg-primary flex items-center justify-center">
               <span className="text-primary-foreground font-bold text-lg">A</span>
             </div>
-            <span className="text-xl font-bold text-foreground hidden sm:block">AnimeVault</span>
+            <span className="text-xl font-bold text-foreground hidden sm:block">OtaMovie</span>
           </a>
 
           <nav className="hidden md:flex items-center gap-6">

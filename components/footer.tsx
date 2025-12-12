@@ -11,7 +11,7 @@ export function Footer() {
               <div className="w-10 h-10 rounded-lg bg-primary flex items-center justify-center">
                 <span className="text-primary-foreground font-bold text-lg">A</span>
               </div>
-              <span className="text-xl font-bold text-foreground">AnimeVault</span>
+              <span className="text-xl font-bold text-foreground">OtaMovie</span>
             </div>
             <p className="text-muted-foreground text-sm leading-relaxed mb-4">
               Your ultimate destination for the best anime movies. Discover, watch, and enjoy thousands of titles.
@@ -21,7 +21,7 @@ export function Footer() {
         </div>
 
         <div className="border-t border-border pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
-          <p className="text-muted-foreground text-sm">© 2025 AnimeVault. All rights reserved.</p>
+          <p className="text-muted-foreground text-sm">© 2025 OtaMovie. All rights reserved.</p>
           <div className="flex gap-6">
             <a href="#" className="text-muted-foreground hover:text-primary transition-colors text-sm">
               Privacy

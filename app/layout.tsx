@@ -7,8 +7,8 @@ import "./globals.css"
 const _inter = Inter({ subsets: ["latin"] })
 const _geistMono = Geist_Mono({ subsets: ["latin"] })
 
-const siteUrl = "https://animevault.example.com"
-const siteName = "AnimeVault"
+const siteUrl = "https://OtaMovie.example.com"
+const siteName = "OtaMovie"
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
@@ -29,14 +29,14 @@ export const metadata: Metadata = {
         url: "/og-image.png",
         width: 1200,
         height: 630,
-        alt: "AnimeVault",
+        alt: "OtaMovie",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    site: "@animevault",
-    creator: "@animevault",
+    site: "@OtaMovie",
+    creator: "@OtaMovie",
     title: `${siteName} - Discover Amazing Anime Movies`,
     description: "Your gateway to the best anime movies. Explore, discover, and enjoy.",
     images: ["/og-image.png"],
